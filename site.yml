@@ -5,7 +5,4 @@
   become_user: Administrator
   
   tasks:
-    - name: Create directory
-      win_file:
-        path: C:\Temp\folder
-        state: directory
+    - ansible.builtin.ping
