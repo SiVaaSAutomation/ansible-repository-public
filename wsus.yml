@@ -22,3 +22,8 @@
     - name: Reboot
       ansible.windows.win_reboot:
       when: res.reboot_required
+
+    - name: Set WSUS database content directory - C:\WSUS_DB
+      ansible.windows.win_powershell:
+        script: |
+          .\wsusutil.exe postinstall CONTENT_DIR=C:\WSUS_DB
