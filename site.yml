@@ -5,4 +5,10 @@
   become_user: Administrator
   
   tasks:
-    - ansible.windows.win_reboot:
+    - name: Change the hostname
+      ansible.windows.win_hostname:
+        name: "ABISS1"
+      register: res
+  
+    - name: Reboot
+      ansible.windows.win_reboot:
