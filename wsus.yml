@@ -7,7 +7,7 @@
   tasks:
     - name: Install Windows Server Update Services (WSUS)
       win_feature: >
-        name=UpdateServices
+        name=UpdateServices,UpdateServices-WidDB
         include_management_tools=yes
         include_sub_features=yes
         state=present
