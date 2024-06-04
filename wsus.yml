@@ -5,6 +5,11 @@
   become_user: Administrator
   
   tasks:
+    - name: Creates directory for WSUS DB
+      ansible.builtin.file:
+        path: C:\WSUS_DB
+        state: directory
+        
     - name: Install Windows Server Update Services (WSUS)
       win_feature:
         name:
