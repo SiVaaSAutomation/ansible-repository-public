@@ -11,7 +11,6 @@
           - UpdateServices
           - UpdateServices-WidDB
         include_management_tools: yes
-        include_sub_features: yes
         state: present
       register: result
   
