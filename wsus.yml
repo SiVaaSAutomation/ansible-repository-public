@@ -6,11 +6,10 @@
   
   tasks:
     - name: Create directory for WSUS database
-      ansible.builtin.debug:
-        msg: "Creating directory C:\\WSUS_DB ..."
       ansible.windows.win_file:
         path: C:\WSUS_DB
         state: directory
+        msg: "Creating directory C:\\WSUS_DB ..."
         
     - name: Install Windows Server Update Services (WSUS)
       win_feature:
