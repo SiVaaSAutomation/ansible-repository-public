@@ -2,7 +2,7 @@
 - hosts: my_servers
   become: true
   become_method: runas
-  ansible_user: Administrator
+  become_user: Administrator
   
   tasks:
     - name: Print OS info
