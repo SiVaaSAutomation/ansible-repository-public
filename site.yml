@@ -12,3 +12,4 @@
   
     - name: Reboot
       ansible.windows.win_reboot:
+      when: res.reboot_required
