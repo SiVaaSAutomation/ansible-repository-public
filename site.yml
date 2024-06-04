@@ -5,6 +5,7 @@
   become_user: Administrator
   
   tasks:
-    - name: Print OS info
-      ansible.builtin.package:
-        name: winrm
+    - name: Create directory
+      win_file:
+        path: C:\Temp\folder
+        state: directory
