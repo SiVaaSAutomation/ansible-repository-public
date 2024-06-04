@@ -27,4 +27,4 @@
       ansible.windows.win_powershell:
         script: |
           CD "C:\Program Files\Update Services\Tools"
-          .\wsusutil.exe postinstall CONTENT_DIR=E:\WSUS_Content
+          .\wsusutil.exe postinstall CONTENT_DIR=C:\WSUS_DB
